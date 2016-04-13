@@ -1,0 +1,37 @@
+Kernel (Zenfone 5)
+==================
+
+Getting Started
+---------------
+
+To initialize your local repository using the kernel trees, use a command like this:
+
+    repo init -u git://github.com/n0ak/android.git -b zf5-kernel
+
+Then to sync up:
+
+    repo sync -c -j4
+
+Remove conflicting directories:
+
+    rm -Rf bionic/tests
+
+Building
+--------
+
+This manifest will already come with the Zenfone 5 kernel files,
+so all you need to do is build it.
+
+    . build/envsetup.sh
+
+    lunch mini_T00F-user
+
+    make -j4 minigzip openssl
+
+    make -f KernelMakefile -j4 TARGET_DEVICE=hd build_kernel
+
+    make -f KernelMakefile -j4 TARGET_DEVICE=hd modules_install
+
+    make -f KernelMakefile -j4 TARGET_DEVICE=hd copy_modules_to_root
+
+Please see the [CyanogenMod Wiki](http://wiki.cyanogenmod.org/) or [Android Docs](https://source.android.com/source/building.html) for more building instructions.

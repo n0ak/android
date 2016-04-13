@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="aosp" fetch="https://android.googlesource.com" review="android-review.googlesource.com" revision="refs/tags/android-5.1.1_r35" />
+  <remote name="github" fetch=".." review="review.cyanogenmod.org" />
+  <default revision="refs/heads/cm-12.1" remote="github" sync-c="true" sync-j="4" />
+
+  <project path="build" name="CyanogenMod/android_build" groups="pdk,tradefed">
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+  <project path="bionic" name="CyanogenMod/android_bionic" groups="pdk" />
+  <project path="device/generic/x86" name="device/generic/x86" groups="pdk" remote="aosp" />
+  <project path="external/compiler-rt" name="platform/external/compiler-rt" groups="pdk" remote="aosp" />
+  <project path="external/jemalloc" name="platform/external/jemalloc" groups="pdk" remote="aosp" />
+  <project path="external/openssl" name="CyanogenMod/android_external_openssl" />
+  <project path="external/zlib" name="CyanogenMod/android_external_zlib" groups="pdk" />
+  <project path="prebuilts/clang/linux-x86/host/3.5" name="platform/prebuilts/clang/linux-x86/host/3.5" groups="pdk,linux" clone-depth="1" remote="aosp" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" groups="pdk,linux" clone-depth="1" remote="aosp" />
+  <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.8" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.8" groups="pdk,linux,x86" clone-depth="1" remote="aosp" />
+
+  <!-- ASUS specific code for kernel -->
+  <project path="device/asus/clovertrail" name="n0ak/android_device_asus_clovertrail" remote="github" revision="refs/heads/master" />
+  <project path="device/intel/common" name="n0ak/android_device_intel_common" remote="github" revision="refs/heads/master" />
+  <project path="external/alsa-lib" name="n0ak/android_external_alsa-lib" remote="github" revision="refs/heads/master" />
+  <project path="external/alsa-utils" name="n0ak/android_external_alsa-utils" remote="github" revision="refs/heads/master" />
+
+  <!-- ASUS Zenfone 5 specific code -->
+  <project path="device/asus/T00F" name="zf5/android_device_asus_T00F" remote="github" revision="refs/heads/zf5-kernel" />
+  <project path="kernel/asus/T00F" name="n0ak/android_kernel_asus_T00F" remote="github" revision="refs/heads/master">
+    <copyfile src="KernelMakefile" dest="KernelMakefile" />
+  </project>
+</manifest>

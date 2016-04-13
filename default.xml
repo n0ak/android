@@ -596,16 +596,16 @@
   <project path="vendor/mksdk" name="MoKee/mk_platform_sdk" />
 
   <!-- Updated MoKee sources -->
-  <project path="frameworks/base" name="zf5mk/android_frameworks_base" remote="github" revision="refs/heads/mkl-mr1" />
-  <project path="frameworks/opt/telephony" name="zf5mk/android_frameworks_opt_telephony" remote="github" revision="refs/heads/mkl-mr1" />
-  <project path="packages/apps/Camera2" name="zf5mk/android_packages_apps_Camera2" remote="github" revision="refs/heads/mkl-mr1" />
-  <project path="packages/services/Telephony" name="zf5mk/android_packages_services_Telephony" remote="github" revision="refs/heads/mkl-mr1" />
+  <project path="frameworks/base" name="n0ak/android_frameworks_base" remote="github" revision="refs/heads/mkl-mr1" />
+  <project path="frameworks/opt/telephony" name="n0ak/android_frameworks_opt_telephony" remote="github" revision="refs/heads/mkl-mr1" />
+  <project path="packages/apps/Camera2" name="n0ak/android_packages_apps_Camera2" remote="github" revision="refs/heads/mkl-mr1" />
+  <project path="packages/services/Telephony" name="n0ak/android_packages_services_Telephony" remote="github" revision="refs/heads/mkl-mr1" />
 
   <!-- CyanogenMod sources -->
   <project path="packages/inputmethods/LatinIME" name="CyanogenMod/android_packages_inputmethods_LatinIME" remote="github" revision="refs/heads/cm-12.1" />
 
   <!-- Prebuilt Android sources -->
-  <project path="frameworks/webview" name="zf5/android_frameworks_webview" remote="github" revision="refs/heads/master" />
+  <project path="frameworks/webview" name="n0ak/android_frameworks_webview" remote="github" revision="refs/heads/master" />
 
   <!-- ASUS Zenfone 5 specific code -->
   <project path="device/asus/a500cg" name="n0ak/android_device_asus_a500cg" remote="github" revision="refs/heads/master" />
@@ -613,5 +613,5 @@
 
   <!-- Intel specific code -->
   <project path="hardware/intel" name="n0ak/android_hardware_intel" groups="intel" remote="github" revision="refs/heads/master" />
-  <project path="vendor/intel/hardware/camera_extension" name="zf5/android_vendor_intel_hardware_camera_extension" remote="github" revision="refs/heads/redhookbay/a50" />
+  <project path="vendor/intel/hardware/camera_extension" name="n0ak/android_vendor_intel_hardware_camera_extension" remote="github" revision="refs/heads/redhookbay/a50" />
 </manifest>

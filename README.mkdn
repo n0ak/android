@@ -1,0 +1,30 @@
+MoKee (Zenfone 5)
+=================
+
+Getting Started
+---------------
+
+To get started with MoKee OpenSource, you will need to get
+familiar with [Repo](https://source.android.com/source/using-repo.html) and [Version Control with Git](https://source.android.com/source/version-control.html).
+
+To initialize your local repository using the MoKee trees, use a command like this:
+
+    repo init -u https://github.com/n0ak/android.git -b mokee_l
+
+Then to sync up:
+
+    repo sync -c -j4
+
+Building
+--------
+
+This manifest will already come with the Zenfone 5 device files,
+so all you need to do is build it.
+
+    . build/envsetup.sh
+
+    lunch mk_a500cg-user
+
+    make -j4
+    
+Please see the [MoKee Build Guide](http://bbs.mfunz.com/thread-754544-1-1.html), [CyanogenMod Wiki](http://wiki.cyanogenmod.org/) or [Android Docs](https://source.android.com/source/building.html) for more building instructions.
